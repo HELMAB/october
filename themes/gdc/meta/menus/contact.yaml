@@ -1,0 +1,11 @@
+items:
+    -
+        title: Contact
+        type: cms-page
+        code: contact
+        reference: contact
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: Contact

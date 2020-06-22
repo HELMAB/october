@@ -1,0 +1,11 @@
+items:
+    -
+        title: About
+        type: cms-page
+        code: about
+        reference: about
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: About

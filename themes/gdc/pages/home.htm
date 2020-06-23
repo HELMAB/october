@@ -4,68 +4,87 @@ layout = "default"
 meta_title = "Home"
 meta_description = "Home"
 is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "about"
+postPage = "post"
 ==
 {% partial "headers/home" %}
+
+{% set posts = blogPosts.posts %}
+
+<!--<ul class="post-list">-->
+<!--    {% for post in posts %}-->
+<!--        <li>-->
+<!--            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>-->
+
+<!--            <p class="info">-->
+<!--                Posted-->
+<!--                {% if post.categories.count %} in {% endif %}-->
+<!--                {% for category in post.categories %}-->
+<!--                    <a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}-->
+<!--                {% endfor %}-->
+<!--                on {{ post.published_at|date('M d, Y') }}-->
+<!--            </p>-->
+
+<!--            <p class="excerpt">{{ post.summary|raw }}</p>-->
+<!--        </li>-->
+<!--    {% else %}-->
+<!--        <li class="no-data">{{ blogPosts.noPostsMessage }}</li>-->
+<!--    {% endfor %}-->
+<!--</ul>-->
+
+<!--{% if posts.lastPage > 1 %}-->
+<!--    <ul class="pagination">-->
+<!--        {% if posts.currentPage > 1 %}-->
+<!--            <li><a href="{{ this.page.baseFileName|page({ (blogPosts.pageParam): (posts.currentPage-1) }) }}">&larr; Prev</a></li>-->
+<!--        {% endif %}-->
+
+<!--        {% for page in 1..posts.lastPage %}-->
+<!--            <li class="{{ posts.currentPage == page ? 'active' : null }}">-->
+<!--                <a href="{{ this.page.baseFileName|page({ (blogPosts.pageParam): page }) }}">{{ page }}</a>-->
+<!--            </li>-->
+<!--        {% endfor %}-->
+
+<!--        {% if posts.lastPage > posts.currentPage %}-->
+<!--            <li><a href="{{ this.page.baseFileName|page({ (blogPosts.pageParam): (posts.currentPage+1) }) }}">Next &rarr;</a></li>-->
+<!--        {% endif %}-->
+<!--    </ul>-->
+<!--{% endif %}-->
+
 
 <div class="container">
     <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-            <div class="post-preview">
-                <a href="post.html">
-                    <h2 class="post-title">
-                        Man must explore, and this is exploration at its greatest
-                    </h2>
-                    <h3 class="post-subtitle">
-                        Problems look mighty small from 150 miles up
-                    </h3>
-                </a>
-                <p class="post-meta">Posted by
-                    <a href="#">Start Bootstrap</a>
-                    on September 24, 2019</p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="post.html">
-                    <h2 class="post-title">
-                        I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
-                    </h2>
-                </a>
-                <p class="post-meta">Posted by
-                    <a href="#">Start Bootstrap</a>
-                    on September 18, 2019</p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="post.html">
-                    <h2 class="post-title">
-                        Science has not yet mastered prophecy
-                    </h2>
-                    <h3 class="post-subtitle">
-                        We predict too much for the next year and yet far too little for the next ten.
-                    </h3>
-                </a>
-                <p class="post-meta">Posted by
-                    <a href="#">Start Bootstrap</a>
-                    on August 24, 2019</p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="post.html">
-                    <h2 class="post-title">
-                        Failure is not an option
-                    </h2>
-                    <h3 class="post-subtitle">
-                        Many say exploration is part of our destiny, but it’s actually our duty to future generations.
-                    </h3>
-                </a>
-                <p class="post-meta">Posted by
-                    <a href="#">Start Bootstrap</a>
-                    on July 8, 2019</p>
-            </div>
-            <hr>
+             {% for post in posts %}
+                <div class="post-preview">
+                    <a href="{{ post.url }}">
+                        <h2 class="post-title">{{ post.title }}</h2>
+                        <h3 class="post-subtitle">{{ post.summary|raw }}</h3>
+                    </a>
+                    <p class="post-meta">Posted by
+                        <a href="#">Start Bootstrap</a>
+                        on {{ post.published_at|date('M d, Y') }}</p>
+                </div>
+                <hr>
+            {% else %}
+                <li class="no-data">{{ blogPosts.noPostsMessage }}</li>
+            {% endfor %}
             <!-- Pager -->
             <div class="clearfix">
-                <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+                {% if posts.lastPage > 1 %}
+                    {% if posts.currentPage > 1 %}
+                        <a class="btn btn-primary float-right" href="{{ this.page.baseFileName|page({ (blogPosts.pageParam): (posts.currentPage-1) }) }}">&larr; Prev</a>
+                    {% endif %}
+
+                    {% if posts.lastPage > posts.currentPage %}
+                        <a class="btn btn-primary float-right" href="{{ this.page.baseFileName|page({ (blogPosts.pageParam): (posts.currentPage+1) }) }}">Next &rarr;</a>
+                    {% endif %}
+                {% endif %}
             </div>
         </div>
     </div>

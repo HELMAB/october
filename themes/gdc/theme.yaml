@@ -4,4 +4,8 @@ author: Asorasoft
 homepage: 'http://asorasoft.com'
 code: ''
 
+require:
+  - Acme.User
+  - Acme.Blog
+
 

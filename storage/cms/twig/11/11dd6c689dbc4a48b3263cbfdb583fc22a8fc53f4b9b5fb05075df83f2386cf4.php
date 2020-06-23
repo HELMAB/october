@@ -50,9 +50,6 @@ class __TwigTemplate_670fb7d2cc9af8801e9457f02e93c6ed05b5f38aa2afca88700826769d9
                     <a class=\"nav-link\" href=\"/about\">About</a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"/post\">Sample Post</a>
-                </li>
-                <li class=\"nav-item\">
                     <a class=\"nav-link\" href=\"/contact\">Contact</a>
                 </li>
             </ul>
@@ -87,9 +84,6 @@ class __TwigTemplate_670fb7d2cc9af8801e9457f02e93c6ed05b5f38aa2afca88700826769d9
                 </li>
                 <li class=\"nav-item\">
                     <a class=\"nav-link\" href=\"/about\">About</a>
-                </li>
-                <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"/post\">Sample Post</a>
                 </li>
                 <li class=\"nav-item\">
                     <a class=\"nav-link\" href=\"/contact\">Contact</a>

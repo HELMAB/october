@@ -226,4 +226,5 @@
   'Backend\\FormWidgets\\MarkdownEditor' => 'modules/backend/formwidgets/MarkdownEditor.php',
   'RainLab\\Blog\\FormWidgets\\BlogMarkdown' => 'plugins/rainlab/blog/formwidgets/BlogMarkdown.php',
   'Backend\\Behaviors\\ReorderController' => 'modules/backend/behaviors/ReorderController.php',
+  'backend\\Controllers\\auth' => 'modules/backend/controllers/auth.php',
 );

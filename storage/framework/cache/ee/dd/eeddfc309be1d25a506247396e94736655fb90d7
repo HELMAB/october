@@ -1,0 +1,62 @@
+1592877430a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:1221:"description = "Default layout"
+==
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Default | {{ this.page.title }}</title>
+    <!-- Bootstrap core CSS -->
+    <link href="{{ 'assets/vendor/bootstrap/css/bootstrap.min.css'|theme }}" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="{{ 'assets/vendor/fontawesome-free/css/all.min.css'|theme }}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="{{ 'assets/css/clean-blog.min.css'|theme }}" rel="stylesheet">
+</head>
+<body>
+{% partial 'navbar' %}
+{% page %}
+<hr/>
+{% partial 'footer' %}
+
+<!-- Bootstrap core JavaScript -->
+<script src="{{ 'assets/vendor/jquery/jquery.min.js'|theme }}"></script>
+<script src="{{ 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js'|theme }}"></script>
+
+<!-- Custom scripts for this template -->
+<script src="{{ 'assets/js/clean-blog.min.js'|theme }}"></script>
+
+</body>
+</html>
+";s:5:"mtime";i:1592876368;s:6:"markup";s:1186:"<!DOCTYPE html>
+<html>
+<head>
+    <title>Default | {{ this.page.title }}</title>
+    <!-- Bootstrap core CSS -->
+    <link href="{{ 'assets/vendor/bootstrap/css/bootstrap.min.css'|theme }}" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="{{ 'assets/vendor/fontawesome-free/css/all.min.css'|theme }}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="{{ 'assets/css/clean-blog.min.css'|theme }}" rel="stylesheet">
+</head>
+<body>
+{% partial 'navbar' %}
+{% page %}
+<hr/>
+{% partial 'footer' %}
+
+<!-- Bootstrap core JavaScript -->
+<script src="{{ 'assets/vendor/jquery/jquery.min.js'|theme }}"></script>
+<script src="{{ 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js'|theme }}"></script>
+
+<!-- Custom scripts for this template -->
+<script src="{{ 'assets/js/clean-blog.min.js'|theme }}"></script>
+
+</body>
+</html>";s:4:"code";N;s:11:"description";s:14:"Default layout";}}

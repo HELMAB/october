@@ -1,0 +1,14 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table laramab_movie_movies'
+    - builder_table_create_laramab_movie_movies.php
+1.0.3:
+    - 'Updated table laramab_movie_movies'
+    - builder_table_update_laramab_movie_movies.php
+1.0.4:
+    - 'Created table laramab_movie_tags'
+    - builder_table_create_laramab_movie_tags.php
+1.0.5:
+    - 'Created table laramab_movie_movies_tags'
+    - builder_table_create_laramab_movie_movies_tags.php

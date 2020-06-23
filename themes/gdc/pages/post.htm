@@ -15,7 +15,9 @@ categoryPage = "blog/category"
 
 {% if post.featured_images.count %}
     {% for image in post.featured_images %}
-        <header class="masthead" style="background-image: url({{ image.path }})" data-src="{{ image.filename }}" alt="{{ image.description }}">
+        <header class="masthead" style="background-image: url({{ image.path }})"
+                data-src="{{ image.filename }}"
+                alt="{{ image.description }}">
             <div class="overlay"></div>
             <div class="container">
                 <div class="row">

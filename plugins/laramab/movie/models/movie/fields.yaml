@@ -1,0 +1,51 @@
+fields:
+    title:
+        label: 'Movie Title'
+        span: full
+        placeholder: 'Movie title'
+        type: text
+    description:
+        label: Description
+        size: ''
+        span: full
+        placeholder: ''
+        type: richeditor
+    year:
+        label: Year
+        span: auto
+        placeholder: Year
+        type: number
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: title
+            type: slug
+        placeholder: Slug
+        type: text
+    poster:
+        label: Poster
+        span: auto
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        type: fileupload
+    galleries:
+        label: 'Movie Gallery'
+        span: auto
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        imageWidth: '300'
+        imageHeight: '450'
+        type: fileupload
+    tags:
+        label: Tags
+        span: auto
+        nameFrom: name
+        descriptionFrom: name
+        type: relation

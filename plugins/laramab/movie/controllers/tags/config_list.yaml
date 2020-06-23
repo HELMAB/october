@@ -1,0 +1,12 @@
+title: Tags
+modelClass: Laramab\Movie\Models\Tag
+list: $/laramab/movie/models/tag/columns.yaml
+recordUrl: 'laramab/movie/tags/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

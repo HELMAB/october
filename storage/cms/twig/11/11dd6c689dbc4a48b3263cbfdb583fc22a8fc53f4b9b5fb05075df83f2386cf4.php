@@ -54,15 +54,23 @@ class __TwigTemplate_670fb7d2cc9af8801e9457f02e93c6ed05b5f38aa2afca88700826769d9
                 <li class=\"nav-item\">
                     <a class=\"nav-link ";
         // line 14
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 14), "id", [], "any", false, false, false, 14) == "about")) {
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 14), "id", [], "any", false, false, false, 14) == "movies")) {
+            echo " active ";
+        }
+        echo "\" href=\"/movies\">Movies</a>
+                </li>
+                <li class=\"nav-item\">
+                    <a class=\"nav-link ";
+        // line 17
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 17), "id", [], "any", false, false, false, 17) == "about")) {
             echo " active ";
         }
         echo "\" href=\"/about\">About</a>
                 </li>
                 <li class=\"nav-item\">
                     <a class=\"nav-link ";
-        // line 17
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 17), "id", [], "any", false, false, false, 17) == "contact")) {
+        // line 20
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 20), "id", [], "any", false, false, false, 20) == "contact")) {
             echo " active ";
         }
         echo "\" href=\"/contact\">Contact</a>
@@ -85,7 +93,7 @@ class __TwigTemplate_670fb7d2cc9af8801e9457f02e93c6ed05b5f38aa2afca88700826769d9
 
     public function getDebugInfo()
     {
-        return array (  65 => 17,  57 => 14,  49 => 11,  37 => 1,);
+        return array (  73 => 20,  65 => 17,  57 => 14,  49 => 11,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -101,6 +109,9 @@ class __TwigTemplate_670fb7d2cc9af8801e9457f02e93c6ed05b5f38aa2afca88700826769d9
             <ul class=\"navbar-nav ml-auto\">
                 <li class=\"nav-item\">
                     <a class=\"nav-link {% if this.page.id == 'home' %} active {% endif %}\" href=\"/\">Home</a>
+                </li>
+                <li class=\"nav-item\">
+                    <a class=\"nav-link {% if this.page.id == 'movies' %} active {% endif %}\" href=\"/movies\">Movies</a>
                 </li>
                 <li class=\"nav-item\">
                     <a class=\"nav-link {% if this.page.id == 'about' %} active {% endif %}\" href=\"/about\">About</a>

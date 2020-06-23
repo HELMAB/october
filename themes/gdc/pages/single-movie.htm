@@ -1,0 +1,60 @@
+title = "Single Movie"
+url = "/single-movie/:slug"
+layout = "default"
+description = "Movie detail page"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "Laramab\Movie\Models\Movie"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "slug"
+notFoundMessage = "Record not found"
+==
+{% set movie = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+{% if movie %}
+    <header class="masthead" style="background-image: url({{ movie.poster.path }})">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <div class="post-heading">
+                        <h1>{{ movie.title }}</h1>
+                        <h2 class="subheading">{{ movie.title }}</h2>
+                        <span class="meta">Posted by <a href="#">Start Bootstrap</a> on {{ movie.created_at | date('M d, Y') }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                {% if movie.tags.count %}
+                <p>
+                    Tags:
+                    {% for tag in movie.tags %}
+                    <a href="/tags/{{ tag.id }}" class="text-muted">{{ tag.name }}</a>
+                    {% endfor %}
+                </p>
+                {% endif %}
+                {{ movie.description|raw }}
+                <div class="row">
+                    {% for gallery in movie.galleries %}
+                    <div class="col-sm-12 mb-3">
+                        <img src="{{ gallery.path }}"
+                             class="img-responsive"
+                             alt="{{ gallery.filename }}"/>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}

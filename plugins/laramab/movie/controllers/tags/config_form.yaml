@@ -1,0 +1,10 @@
+name: Tags
+modelClass: Laramab\Movie\Models\Tag
+form: $/laramab/movie/models/tag/fields.yaml
+defaultRedirect: laramab/movie/tags
+create:
+    redirect: 'laramab/movie/tags/update/:id'
+    redirectClose: laramab/movie/tags
+update:
+    redirect: laramab/movie/tags
+    redirectClose: laramab/movie/tags

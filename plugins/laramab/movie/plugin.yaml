@@ -1,0 +1,16 @@
+plugin:
+    name: 'laramab.movie::lang.plugin.name'
+    description: 'Movie platform'
+    author: Laramab
+    icon: oc-icon-video-camera
+    homepage: 'https://helmab.info'
+navigation:
+    main-menu-item:
+        label: Movie
+        url: laramab/movie/movies
+        icon: icon-video-camera
+        sideMenu:
+            side-menu-item:
+                label: Tag
+                url: laramab/movie/tags
+                icon: icon-tags

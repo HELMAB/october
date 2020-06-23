@@ -1,0 +1,15 @@
+columns:
+    title:
+        label: title
+        type: text
+        searchable: true
+        sortable: false
+    slug:
+        label: slug
+        type: text
+    created_at:
+        label: created_at
+        type: datetime
+    updated_at:
+        label: updated_at
+        type: datetime

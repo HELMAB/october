@@ -1,0 +1,10 @@
+name: Movies
+form: $/laramab/movie/models/movie/fields.yaml
+modelClass: Laramab\Movie\Models\Movie
+defaultRedirect: laramab/movie/movies
+create:
+    redirect: 'laramab/movie/movies/update/:id'
+    redirectClose: laramab/movie/movies
+update:
+    redirect: laramab/movie/movies
+    redirectClose: laramab/movie/movies

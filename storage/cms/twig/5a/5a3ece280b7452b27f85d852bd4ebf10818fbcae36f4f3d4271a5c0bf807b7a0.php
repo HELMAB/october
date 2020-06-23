@@ -44,54 +44,32 @@ class __TwigTemplate_7b34b794d14bc8ef96bce2aafd8db37b545e57b17f96c375a5e9bffa549
     <!-- Bootstrap core CSS -->
     <link href=\"";
         // line 6
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/vendor/bootstrap/css/bootstrap.min.css");
-        echo "\" rel=\"stylesheet\">
-
-    <!-- Custom fonts for this template -->
-    <link href=\"";
-        // line 9
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/vendor/fontawesome-free/css/all.min.css");
-        echo "\" rel=\"stylesheet\" type=\"text/css\">
-    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-
-    <!-- Custom styles for this template -->
-    <link href=\"";
-        // line 14
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/css/clean-blog.min.css");
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter([0 => "assets/vendor/bootstrap/css/bootstrap.min.css", 1 => "assets/vendor/fontawesome-free/css/all.min.css", 2 => "https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic", 3 => "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800", 4 => "assets/css/clean-blog.min.css"]);
+        // line 12
         echo "\" rel=\"stylesheet\">
 </head>
 <body>
 ";
-        // line 17
+        // line 15
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("navbar"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 18
+        // line 16
         echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
-        // line 19
+        // line 17
         echo "<hr/>
 ";
-        // line 20
+        // line 18
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("footer"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 21
+        // line 19
         echo "
 <!-- Bootstrap core JavaScript -->
 <script src=\"";
-        // line 23
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/vendor/jquery/jquery.min.js");
-        echo "\"></script>
-<script src=\"";
-        // line 24
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/vendor/bootstrap/js/bootstrap.bundle.min.js");
-        echo "\"></script>
-
-<!-- Custom scripts for this template -->
-<script src=\"";
-        // line 27
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/clean-blog.min.js");
+        // line 21
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter([0 => "assets/vendor/jquery/jquery.min.js", 1 => "assets/vendor/bootstrap/js/bootstrap.bundle.min.js", 2 => "assets/js/clean-blog.min.js"]);
+        // line 25
         echo "\"></script>
 
 </body>
@@ -110,7 +88,7 @@ class __TwigTemplate_7b34b794d14bc8ef96bce2aafd8db37b545e57b17f96c375a5e9bffa549
 
     public function getDebugInfo()
     {
-        return array (  94 => 27,  88 => 24,  84 => 23,  80 => 21,  76 => 20,  73 => 19,  71 => 18,  67 => 17,  61 => 14,  53 => 9,  47 => 6,  42 => 4,  37 => 1,);
+        return array (  73 => 25,  71 => 21,  67 => 19,  63 => 18,  60 => 17,  58 => 16,  54 => 15,  49 => 12,  47 => 6,  42 => 4,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -120,15 +98,13 @@ class __TwigTemplate_7b34b794d14bc8ef96bce2aafd8db37b545e57b17f96c375a5e9bffa549
 <head>
     <title>{{ this.page.title }} | Clean Blog</title>
     <!-- Bootstrap core CSS -->
-    <link href=\"{{ 'assets/vendor/bootstrap/css/bootstrap.min.css'|theme }}\" rel=\"stylesheet\">
-
-    <!-- Custom fonts for this template -->
-    <link href=\"{{ 'assets/vendor/fontawesome-free/css/all.min.css'|theme }}\" rel=\"stylesheet\" type=\"text/css\">
-    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-
-    <!-- Custom styles for this template -->
-    <link href=\"{{ 'assets/css/clean-blog.min.css'|theme }}\" rel=\"stylesheet\">
+    <link href=\"{{ [
+    'assets/vendor/bootstrap/css/bootstrap.min.css',
+    'assets/vendor/fontawesome-free/css/all.min.css',
+    'https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic',
+    'https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800',
+    'assets/css/clean-blog.min.css'
+    ]|theme }}\" rel=\"stylesheet\">
 </head>
 <body>
 {% partial 'navbar' %}
@@ -137,11 +113,11 @@ class __TwigTemplate_7b34b794d14bc8ef96bce2aafd8db37b545e57b17f96c375a5e9bffa549
 {% partial 'footer' %}
 
 <!-- Bootstrap core JavaScript -->
-<script src=\"{{ 'assets/vendor/jquery/jquery.min.js'|theme }}\"></script>
-<script src=\"{{ 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js'|theme }}\"></script>
-
-<!-- Custom scripts for this template -->
-<script src=\"{{ 'assets/js/clean-blog.min.js'|theme }}\"></script>
+<script src=\"{{ [
+'assets/vendor/jquery/jquery.min.js',
+'assets/vendor/bootstrap/js/bootstrap.bundle.min.js',
+'assets/js/clean-blog.min.js'
+]|theme }}\"></script>
 
 </body>
 </html>", "/Users/helmab/Desktop/october/themes/gdc/layouts/default.htm", "");

@@ -2,7 +2,7 @@ name: Asorasoft
 description: 'Asorasoft Technology'
 author: Asorasoft
 homepage: 'http://asorasoft.com'
-code: ''
+code: asorasoftoctober
 
 require:
   - Acme.User

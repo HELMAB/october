@@ -41,7 +41,7 @@ return [
     |
     */
 
-    'url' => 'http://127.0.0.1:8000/',
+    'url' => 'https://october.test/',
 
     /*
     |--------------------------------------------------------------------------
@@ -107,7 +107,7 @@ return [
     |
     */
 
-    'key' => 'yi31K1zfJF3b6sBhQWbdtrw6urXKBX9K',
+    'key' => 'zfPiwf5COOnIipZDRtrvJheLcCdtCqPH',
 
     'cipher' => 'AES-256-CBC',
 

@@ -1,18 +1,48 @@
-title = "tags"
+title = "Tags"
 url = "/tags/:id"
+layout = "default"
 is_hidden = 0
 
-[builderList]
-modelClass = "Laramab\Movie\Models\Movie"
-scope = "-"
-scopeValue = "{{ :scope }}"
-displayColumn = "title"
-noRecordsMessage = "No records found"
-detailsPage = "single-movie"
-detailsKeyColumn = "slug"
-detailsUrlParameter = "slug"
-pageNumber = "{{ :page }}"
-sortColumn = "created_at"
-sortDirection = "desc"
+[builderDetails]
+modelClass = "Laramab\Movie\Models\Tag"
+identifierValue = "{{ :id }}"
+modelKeyColumn = "id"
+displayColumn = "name"
+notFoundMessage = "Record not found"
 ==
-{% component 'builderList' %}
+
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+<header class="masthead" style="background-image: url({{ 'assets/img/post-bg.jpg' | theme }})">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="post-heading">
+                    <h1>{{ record.name }}</h1>
+                    <h2 class="subheading">{{ record.created_at | date('d/m/Y') }}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            {% if record %}
+                <h3>{{ record.name }}</h3>
+                {% if record.movies.count %}
+                    {% for movie in record.movies %}
+                        <a href="/single-movie/{{ movie.slug }}">{{ movie.title }}</a>
+                    {% endfor %}
+                {% endif %}
+            {% else %}
+                {{ notFoundMessage }}
+            {% endif %}
+        </div>
+    </div>
+</div>

@@ -31,7 +31,7 @@ class Tag extends Model
      */
     public $belongsToMany = [
         'movies' => [
-            Tag::class,
+            Movie::class,
             'table' => 'laramab_movie_movies_tags',
             'tag_id',
             'movie_id',

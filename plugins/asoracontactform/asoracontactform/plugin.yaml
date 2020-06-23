@@ -1,0 +1,11 @@
+plugin:
+    name: 'asoracontactform.asoracontactform::lang.plugin.name'
+    description: 'asoracontactform.asoracontactform::lang.plugin.description'
+    author: AsoraContactForm
+    icon: oc-icon-paper-plane
+    homepage: 'https://asoradev.com'
+navigation:
+    main-menu-item:
+        label: 'Contact Form'
+        url: asoracontactform/asoracontactform/tests
+        icon: icon-paper-plane

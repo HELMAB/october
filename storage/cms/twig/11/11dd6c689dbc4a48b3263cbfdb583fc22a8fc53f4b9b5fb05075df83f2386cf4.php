@@ -44,13 +44,28 @@ class __TwigTemplate_670fb7d2cc9af8801e9457f02e93c6ed05b5f38aa2afca88700826769d9
         <div class=\"collapse navbar-collapse\" id=\"navbarResponsive\">
             <ul class=\"navbar-nav ml-auto\">
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"/\">Home</a>
+                    <a class=\"nav-link ";
+        // line 11
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 11), "id", [], "any", false, false, false, 11) == "home")) {
+            echo " active ";
+        }
+        echo "\" href=\"/\">Home</a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"/about\">About</a>
+                    <a class=\"nav-link ";
+        // line 14
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 14), "id", [], "any", false, false, false, 14) == "about")) {
+            echo " active ";
+        }
+        echo "\" href=\"/about\">About</a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"/contact\">Contact</a>
+                    <a class=\"nav-link ";
+        // line 17
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 17), "id", [], "any", false, false, false, 17) == "contact")) {
+            echo " active ";
+        }
+        echo "\" href=\"/contact\">Contact</a>
                 </li>
             </ul>
         </div>
@@ -63,9 +78,14 @@ class __TwigTemplate_670fb7d2cc9af8801e9457f02e93c6ed05b5f38aa2afca88700826769d9
         return "/Users/helmab/Desktop/october/themes/gdc/partials/navbar.htm";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  37 => 1,);
+        return array (  65 => 17,  57 => 14,  49 => 11,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -80,13 +100,13 @@ class __TwigTemplate_670fb7d2cc9af8801e9457f02e93c6ed05b5f38aa2afca88700826769d9
         <div class=\"collapse navbar-collapse\" id=\"navbarResponsive\">
             <ul class=\"navbar-nav ml-auto\">
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"/\">Home</a>
+                    <a class=\"nav-link {% if this.page.id == 'home' %} active {% endif %}\" href=\"/\">Home</a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"/about\">About</a>
+                    <a class=\"nav-link {% if this.page.id == 'about' %} active {% endif %}\" href=\"/about\">About</a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"/contact\">Contact</a>
+                    <a class=\"nav-link {% if this.page.id == 'contact' %} active {% endif %}\" href=\"/contact\">Contact</a>
                 </li>
             </ul>
         </div>

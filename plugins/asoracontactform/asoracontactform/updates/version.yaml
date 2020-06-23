@@ -1,0 +1,5 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table asoracontactform_asoracontactform_tests'
+    - builder_table_create_asoracontactform_asoracontactform_tests.php

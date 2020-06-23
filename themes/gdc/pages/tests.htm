@@ -1,0 +1,20 @@
+title = "Tests"
+url = "/tests"
+layout = "default"
+description = "test"
+is_hidden = 0
+
+[builderList]
+modelClass = "Asoracontactform\AsoraContactForm\Models\Test"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "name"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+recordsPerPage = 10
+pageNumber = "{{ :page }}"
+sortColumn = "created_at"
+sortDirection = "desc"
+==
+{% component 'builderList' %}

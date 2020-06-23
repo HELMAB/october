@@ -44,32 +44,32 @@ class __TwigTemplate_7b34b794d14bc8ef96bce2aafd8db37b545e57b17f96c375a5e9bffa549
     <!-- Bootstrap core CSS -->
     <link href=\"";
         // line 6
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter([0 => "assets/vendor/bootstrap/css/bootstrap.min.css", 1 => "assets/vendor/fontawesome-free/css/all.min.css", 2 => "https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic", 3 => "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800", 4 => "assets/css/clean-blog.min.css"]);
-        // line 12
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter([0 => "assets/vendor/bootstrap/css/bootstrap.min.css", 1 => "assets/vendor/fontawesome-free/css/all.min.css", 2 => "https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic", 3 => "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800", 4 => "assets/css/clean-blog.min.css", 5 => "assets/css/app.css"]);
+        // line 13
         echo "\" rel=\"stylesheet\">
 </head>
 <body>
 ";
-        // line 15
+        // line 16
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("navbar"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 16
-        echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
         // line 17
+        echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
+        // line 18
         echo "<hr/>
 ";
-        // line 18
+        // line 19
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("footer"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 19
+        // line 20
         echo "
 <!-- Bootstrap core JavaScript -->
 <script src=\"";
-        // line 21
+        // line 22
         echo $this->extensions['Cms\Twig\Extension']->themeFilter([0 => "assets/vendor/jquery/jquery.min.js", 1 => "assets/vendor/bootstrap/js/bootstrap.bundle.min.js", 2 => "assets/js/clean-blog.min.js"]);
-        // line 25
+        // line 26
         echo "\"></script>
 
 </body>
@@ -88,7 +88,7 @@ class __TwigTemplate_7b34b794d14bc8ef96bce2aafd8db37b545e57b17f96c375a5e9bffa549
 
     public function getDebugInfo()
     {
-        return array (  73 => 25,  71 => 21,  67 => 19,  63 => 18,  60 => 17,  58 => 16,  54 => 15,  49 => 12,  47 => 6,  42 => 4,  37 => 1,);
+        return array (  73 => 26,  71 => 22,  67 => 20,  63 => 19,  60 => 18,  58 => 17,  54 => 16,  49 => 13,  47 => 6,  42 => 4,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -103,7 +103,8 @@ class __TwigTemplate_7b34b794d14bc8ef96bce2aafd8db37b545e57b17f96c375a5e9bffa549
     'assets/vendor/fontawesome-free/css/all.min.css',
     'https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic',
     'https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800',
-    'assets/css/clean-blog.min.css'
+    'assets/css/clean-blog.min.css',
+    'assets/css/app.css'
     ]|theme }}\" rel=\"stylesheet\">
 </head>
 <body>

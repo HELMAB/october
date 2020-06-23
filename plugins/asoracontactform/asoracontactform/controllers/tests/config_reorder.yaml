@@ -1,0 +1,5 @@
+title: Tests
+modelClass: Asoracontactform\AsoraContactForm\Models\Test
+nameFrom: name
+toolbar:
+    buttons: reorder_toolbar
